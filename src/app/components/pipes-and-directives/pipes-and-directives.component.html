@@ -1,0 +1,22 @@
+<div class="container">
+  <h4>Pipe that converts phone number into US format</h4>
+  <div class="row">
+    <div class="col-12">
+      <label for="phnum">Enter phone number</label>
+      <input type="tel" name="phnum" name="phnum" [(ngModel)]="telInput" (keyup)="inputChanged()" #phnum="ngModel"
+      appHighlightError />
+      <div *ngIf="(phnum.value && phnum.value.length !== 10) && (phnum.dirty || phnum.touched)" class="error-msg">
+        Enter 10 digits
+      </div>
+    </div>
+    <div class="col-12">
+      <label>Formatted Number</label>
+      <p>{{telInput | convertTelNumber}}</p>
+    </div> 
+  </div>
+  <div class="row">
+    <button class="col-4 btn btn-primary" [ngStyle]="{'background-color': this.btnColor}"
+      (click)="toggleColor()">Click to toggle color </button>
+      {{colorToggler}}
+  </div>
+</div>

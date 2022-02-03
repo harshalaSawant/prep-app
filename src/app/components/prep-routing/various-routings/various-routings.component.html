@@ -1,0 +1,46 @@
+<div class="row">
+  <h4 class="col-12">Route from component.ts file</h4>
+  <div class="col-5">
+    <p-dropdown [options]="components" [(ngModel)]="selectedComp" optionLabel="name"
+      (onChange)="routeToOtherComp(selectedComp.route)"></p-dropdown>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <h4 class="col-12">Nested Routes</h4>
+  <div class="col-12">
+    <h5>Navigating to child components using routerlink</h5>
+    <nav>
+      <ul>
+        <li><a [routerLink]="['childA']">Child A</a></li>
+        <li><a [routerLink]="['childB']">Child B</a></li>
+        <li><a [routerLink]="['childData', 1]" >Student 1</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="col-12">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-12">
+    <h5>Passing data to child A</h5>
+    <input type="text" [(ngModel)]="inputMsgToA" paceholder="Enter message for ChildA" />
+    <!-- <app-child-a [data]="inputMsgToA" [student]="studentInputToA"></app-child-a> -->
+  </div>
+  <h5>Using Content Projection of child b</h5>
+  <app-child-b>
+    <p style="background-color: brown;">Paragraph in Parent</p>
+  </app-child-b>
+</div>
+<hr />
+<div class="row">
+  <div class="col-12">
+    <h5 class="col-12">Using Resolver</h5>
+    <div class="col-5">
+      <p-dropdown [options]="students" [(ngModel)]="selectedStudent" optionLabel="name"
+        (onChange)="routeToStudentDetail(selectedStudent)"></p-dropdown>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <button type="button" class="btn btn-primary" (click)="loadadmin()">Click to load admin</button>
+</div>

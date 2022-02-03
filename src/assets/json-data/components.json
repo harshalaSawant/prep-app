@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Observables",
+    "route": "/observables"
+  },
+  {
+    "name": "Pipes And Directives",
+    "route": "/pipesAndDirectives"
+  },
+  {
+    "name": "Lifecycle Hooks",
+    "route": "/lifecycleHooks"
+  },
+  {
+    "name": "Forms",
+    "route": "/forms"
+  },
+  {
+    "name": "Services",
+    "route": "/services"
+  }
+]

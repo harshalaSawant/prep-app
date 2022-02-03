@@ -1,0 +1,27 @@
+<div class="container">
+  <p-toast></p-toast>
+  <div class="row factory-service">
+    <div class="col-12">
+      <button class="col-4 btn btn-primary" (click)="getDataFromWithoutInjectableSer()">Click here to get data from
+        service
+        without Injectable decorator</button>
+      <hr />
+      <div class="col-8">
+        <h4 class="col">Response from service: </h4>
+        <div class="col">{{factorySerData | json}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row injectable-service">
+    <div class="col-12">
+      <button class="col-4 btn btn-primary" (click)="getDataFromInjectableSer()">Click here to get data from Injectable
+        Service</button>
+      <hr />
+      <div class="col-8">
+        <h4 class="col">Response from service: </h4>
+        <div class="col">{{injectableSerData | json}}</div>
+      </div>
+    </div>
+  </div>
+</div>

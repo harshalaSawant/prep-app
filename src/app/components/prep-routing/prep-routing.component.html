@@ -1,0 +1,28 @@
+<div class="container">
+  <h3>Angular Routing</h3>
+  <!-- <p-tabView>
+    <p-tabPanel header="Common routing problems">
+      <app-various-routings></app-various-routings>
+    </p-tabPanel>
+    <p-tabPanel header="Lazy loading routes">
+        <app-prep-routing-lazy-loading></app-prep-routing-lazy-loading>
+    </p-tabPanel>
+  </p-tabView> -->
+
+  <nav class="navbar navbar-expand-sm navbar-light navbar-bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggleTarget2">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="toggleTarget2">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['variousRoutings']">Various Routings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['lazyLoadRoutings']">Lazy loading routes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
